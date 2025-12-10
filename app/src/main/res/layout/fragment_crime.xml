@@ -1,59 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CrimeFragment">
 
     <TextView
-        style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_title_label"/>
+        android:text="Заголовок преступления"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginBottom="8dp"/>
 
     <EditText
         android:id="@+id/crime_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/crime_title_hint"
-        android:minHeight="48dp" />
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:hint="Введите заголовок преступления"
+        android:maxLines="1"/>
 
     <TextView
-        style="?android:listSeparatorTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_details_label"/>
+        android:text="Детали преступления"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/crime_details"
+        android:layout_width="390dp"
+        android:layout_height="100dp"
+        android:hint="Введите детали преступления"
+        android:maxLines="1"/>
 
     <Button
         android:id="@+id/crime_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Wed Sept 29 9:00 EST 2025"/>
+        android:text="Дата преступления"
+        android:layout_marginTop="16dp"/>
 
     <CheckBox
         android:id="@+id/crime_solved"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_solved_label"/>
+        android:text="Преступление раскрыто"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/crime_suspect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_suspect_text"/>
-
-    <Button
-        android:id="@+id/crime_report"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/crime_report_text"/>
+        android:text="Выбрать подозреваемого"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/crime_call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crime_call_text"/>
+        android:text="Позвонить подозреваемому"
+        android:layout_marginTop="8dp"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/crime_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отправить отчет"
+        android:layout_marginTop="8dp"/>
 
 </LinearLayout>
